@@ -9,11 +9,12 @@ import SwiftUI
 
 struct LocalisationPicker: View {
     @State var selectedOption = 0
+    let arrayLength : Int
     let options = ["My location","Tunis","Sousse","Sfax"]
     var body: some View {
         HStack{
             VStack{
-                Text("Recent places").font(.title)
+                Text("Recent places(\(arrayLength))").font(.title)
                 Text("Range")
             }
             .frame(alignment: .topLeading)
@@ -25,12 +26,8 @@ struct LocalisationPicker: View {
                     Text(self.options[index])
                 }
             }
-        }
+        }.frame(alignment: .leading)
     }
 }
 
-struct LocalisationPicker_Previews: PreviewProvider {
-    static var previews: some View {
-        LocalisationPicker()
-    }
-}
+

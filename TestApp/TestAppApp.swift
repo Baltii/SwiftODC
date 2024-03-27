@@ -10,10 +10,13 @@ import SwiftUI
 @main
 struct TestAppApp: App {
 
+    @StateObject var homeViewModel : HomeViewModel = HomeViewModel(placeMapper: PlaceMapper())
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                
+            NavigationStack
+            {
+                HomeView()
+            }.environmentObject(self.homeViewModel)
         }
     }
 }

@@ -24,14 +24,15 @@ struct itemView : View {
                                 .padding([.leading,.trailing],12)
                                 .padding([.bottom,.top],6)
                                 .background(
-                                    RoundedRectangle(cornerRadius: 50).fill(.secondary))
+                                    RoundedRectangle(cornerRadius: 50).fill(.secondary).opacity(0.2))
                     }
                 }
             }
             Spacer()
             VStack{
                 Image(systemName: "star")
-                Text(String(format: "%.1f m", item.distance)).bold().foregroundColor(.gray).font(.system(size: 14)).padding(.top,8)
+                
+                Text(String(format: "%.1f m", item.distance)).bold().foregroundColor(.gray).font(.system(size: 10)).padding(.top,8)
             }
         }
     }

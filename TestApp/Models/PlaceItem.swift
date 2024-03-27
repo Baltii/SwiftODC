@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Place {
+struct Place : Identifiable, Hashable {
     let id = UUID()
     let name : String
     let distance : Double
